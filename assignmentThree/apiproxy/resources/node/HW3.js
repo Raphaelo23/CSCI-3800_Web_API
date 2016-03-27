@@ -5,10 +5,16 @@ var express = require('express');
 var app = express();
 var url = require('url');
 
-
 app.get('/validate', function (req, res) {
+    var queryJsonObject = JSON.parse(JSON.stringify(url.parse(req.url,true).query));
 
-    gitHubToken('0316d22282678c04a2b7af4123ad599be402ef4b', res);
+    if(queryJsonObject.token != null) {
+        gitHubToken(queryJsonObject.token, res);
+    } else {
+        res.writeHead(401, {'Contect-Type' : 'test/plain'});
+        res.write('no Github Access Token given');
+        res.end();
+    }
 
 });
 
@@ -27,8 +33,6 @@ function gitHubToken(token, response) {
         // required
         version: "3.0.0"
     });
-
-    //var token = "0316d22282678c04a2b7af4123ad599be402ef4b";
 
     github.authenticate({
         type: "oauth",

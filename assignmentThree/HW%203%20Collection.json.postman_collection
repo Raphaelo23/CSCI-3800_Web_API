@@ -6,7 +6,8 @@
 		"c8f26db0-8361-1758-91fe-33996024c9d7",
 		"a9d19987-e273-899b-416d-f70110ee25c1",
 		"ff29f0a4-4db4-63ab-b43b-d13627253f4b",
-		"6d0d81c3-7257-ce89-f4a9-5979a5224c06"
+		"6d0d81c3-7257-ce89-f4a9-5979a5224c06",
+		"7d1a2f06-2898-9151-934a-52f904ed7440"
 	],
 	"folders": [],
 	"timestamp": 1459116556204,
@@ -16,6 +17,25 @@
 	"requests": [
 		{
 			"id": "6d0d81c3-7257-ce89-f4a9-5979a5224c06",
+			"headers": "Authorization: Bearer Ba9KGOnsamcmlFtRV1VA82bGpR5H\n",
+			"url": "http://raphaelo23-test.apigee.net/hw3/validate?token=5443cbe17706ce2911390ce4a942d8a5bddac60f ",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": "tests[\"Status code is 200\"] = responseCode.code === 200;\ntests[\"Body matches string\"] = responseBody.has(\"user name: Raphaelo23\");",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1459119622675,
+			"name": "http://raphaelo23-test.apigee.net/hw3/validate",
+			"description": "",
+			"collectionId": "dbc83204-9e30-dd79-e860-fb651af6162c",
+			"responses": []
+		},
+		{
+			"id": "7d1a2f06-2898-9151-934a-52f904ed7440",
 			"headers": "Authorization: Bearer Ba9KGOnsamcmlFtRV1VA82bGpR5H\n",
 			"url": "http://raphaelo23-test.apigee.net/hw3/validate",
 			"pathVariables": {},
@@ -27,10 +47,10 @@
 			"name": "http://raphaelo23-test.apigee.net/hw3/validate",
 			"description": "",
 			"descriptionFormat": "html",
-			"time": 1459117389431,
+			"time": 1459120159721,
 			"version": 2,
 			"responses": [],
-			"tests": "tests[\"Status code is 200\"] = responseCode.code === 200;\ntests[\"Body matches string\"] = responseBody.has(\"user name: Raphaelo23\");",
+			"tests": "tests[\"Status code is 401\"] = responseCode.code === 401;\ntests[\"Body matches string\"] = responseBody.has(\"no Github Access Token given\");",
 			"currentHelper": "normal",
 			"helperAttributes": {}
 		},
