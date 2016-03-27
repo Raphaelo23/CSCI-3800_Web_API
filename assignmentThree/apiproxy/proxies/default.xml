@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+    <Description/>
+    <FaultRules/>
+    <PreFlow name="PreFlow">
+        <Request/>
+        <Response/>
+    </PreFlow>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response/>
+    </PostFlow>
+    <Flows>
+        <Flow name="Authorize">
+            <Description/>
+            <Request>
+                <Step>
+                    <Name>ValidateOAuth</Name>
+                </Step>
+                <Step>
+                    <Name>Expired-Token</Name>
+                    <Condition>oauthV2.ValidateOAuth.fault.name = "keymanagement.service.access_token_expired"</Condition>
+                </Step>
+                <Step>
+                    <Name>Invalid-Token</Name>
+                    <Condition>oauthV2.ValidateOAuth.failed = "true"</Condition>
+                </Step>
+            </Request>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/validate") and (request.verb = "GET")</Condition>
+        </Flow>
+    </Flows>
+    <HTTPProxyConnection>
+        <BasePath>/hw3</BasePath>
+        <Properties/>
+        <VirtualHost>default</VirtualHost>
+        <VirtualHost>secure</VirtualHost>
+    </HTTPProxyConnection>
+    <RouteRule name="default">
+        <TargetEndpoint>default</TargetEndpoint>
+    </RouteRule>
+</ProxyEndpoint>

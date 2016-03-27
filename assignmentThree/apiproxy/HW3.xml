@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="5" name="HW3">
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1459114673460</CreatedAt>
+    <CreatedBy>raphael.oflynn@ucdenver.edu</CreatedBy>
+    <Description></Description>
+    <DisplayName>HW3</DisplayName>
+    <LastModifiedAt>1459116457618</LastModifiedAt>
+    <LastModifiedBy>raphael.oflynn@ucdenver.edu</LastModifiedBy>
+    <Policies>
+        <Policy>Expired-Token</Policy>
+        <Policy>Invalid-Token</Policy>
+        <Policy>ValidateOAuth</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>node://HW3.js</Resource>
+        <Resource>node://node_modules_github.zip</Resource>
+        <Resource>node://package.json</Resource>
+    </Resources>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+    <validate>false</validate>
+</APIProxy>
