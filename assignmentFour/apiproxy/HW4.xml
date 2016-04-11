@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="1" name="HW4">
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1460339735863</CreatedAt>
+    <CreatedBy>raphael.oflynn@ucdenver.edu</CreatedBy>
+    <Description></Description>
+    <DisplayName>HW4</DisplayName>
+    <LastModifiedAt>1460344417883</LastModifiedAt>
+    <LastModifiedBy>raphael.oflynn@ucdenver.edu</LastModifiedBy>
+    <Policies/>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>node://HW4.js</Resource>
+        <Resource>node://package.json</Resource>
+    </Resources>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+    <validate>false</validate>
+</APIProxy>

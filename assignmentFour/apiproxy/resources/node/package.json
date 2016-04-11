@@ -1,0 +1,11 @@
+ {
+    "name":"HW4",
+    "version":"0.0.0",
+    "description":"BaaS Proxy",
+    "main":"HW4.js",
+    "dependencies": {
+        "express":"3.x.x",
+        "usergrid":"x.x.x",
+        "argo":"x.x.x"
+    }
+}
