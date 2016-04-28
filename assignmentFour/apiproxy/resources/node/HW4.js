@@ -132,6 +132,7 @@ app.delete('/movies', function(req, res) {
     } else {
         prop = { 
         	endpoint:"movies",
+        	method:"DELETE",
         	qs:{ql:req.query.ql.toString()}
         }; 
         
