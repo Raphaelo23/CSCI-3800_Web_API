@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="5" name="Passhole">
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1462229111862</CreatedAt>
+    <CreatedBy>raphael.oflynn@ucdenver.edu</CreatedBy>
+    <Description>A place to store passwords on the cloud</Description>
+    <DisplayName>Passhole</DisplayName>
+    <LastModifiedAt>1462231704019</LastModifiedAt>
+    <LastModifiedBy>raphael.oflynn@ucdenver.edu</LastModifiedBy>
+    <Policies/>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>node://package.json</Resource>
+        <Resource>node://passhole.js</Resource>
+    </Resources>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+    <validate>false</validate>
+</APIProxy>
